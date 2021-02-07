@@ -1,6 +1,10 @@
-# TODO: Write documentation for `Myecho`
-module Myecho
-  VERSION = "0.1.0"
+module MyEcho
+  class Cli
+    def initialize(@io : IO = STDOUT)
+    end
 
-  # TODO: Put your code here
+    def run(args)
+      @io.print args.join(" ") + "\n"
+    end
+  end
 end
